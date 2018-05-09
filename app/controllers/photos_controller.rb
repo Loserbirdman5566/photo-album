@@ -36,6 +36,12 @@ class PhotosController < ApplicationController
     redirect_to photos_url
   end
 
+  def deleteall
+    @photo = Photo.delete_all
+
+    redirect_to photos_url
+  end
+
   private
 
   def photo_params
