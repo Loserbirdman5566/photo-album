@@ -19,15 +19,15 @@ class PhotosController < ApplicationController
   end
 
   def show
-    set_photo
+    
   end
 
   def edit
-    set_photo
+    
   end
 
   def update
-    set_photo
+    
     if @photo.update_attributes(photo_params)
       redirect_to photo_path(@photo)
     else  
@@ -36,7 +36,7 @@ class PhotosController < ApplicationController
   end
 
   def destroy
-    set_photo
+    
     @photo.destroy
 
     redirect_to photos_url
