@@ -11,6 +11,7 @@ class PhotosController < ApplicationController
     @photo = Photo.new(photo_params)
     if @photo.save
       redirect_to photos_url
+      # redircet_to :action => :index  //are equal to 13 line code
     else
       render :action => :new    
     end  
