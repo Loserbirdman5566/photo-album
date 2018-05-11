@@ -54,4 +54,8 @@ class PhotosController < ApplicationController
     params.require(:photo).permit(:title, :date, :description, :file_location)
   end
 
+  def set_photo
+    @photo = Photo.find(params[:id])
+  end
+
 end
