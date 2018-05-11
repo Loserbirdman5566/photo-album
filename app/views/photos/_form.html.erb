@@ -6,7 +6,7 @@
   </ul>
 <% end %>
 
-<%= form_for @photo do |f| %>
+<%= form_for @photo, :url => photos_path do |f| %>
   <%= f.label :title, "Title" %>
   <%= f.text_field :title %>
 
@@ -19,6 +19,6 @@
   <%= f.label :file_location, "File Location" %>
   <%= f.text_field :file_location %>
 
-  <%= f.submit "Update" %>
+  
 <% end %>
 
